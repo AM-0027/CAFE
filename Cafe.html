@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- RESPONSIVE SITE AJAX LINK -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONT STYLE LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="my_cafe/jpeg" href="my_cafe.jpeg"> 
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="Cafe.css">
+    <script src="cafe.js"></script>
     <title>MY CAFFEE</title>
 </head>
 <body>
+    <div id="content">
     <header class="header">
         <nav class="nav-container">
-          <a href="#" class="logo">Secret Dairies</a>
+
+            <a href="" class="logo">Secret Dairies Café</a>
+
             <div class="nav-links">
-                <a href="#">Menu</a>
-                <a href="#">About</a>
-                <a href="#">Locations</a>
-                <a href="#">Contact</a>
-   
-        <form class="frm" action="action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+                <a href="#" class="active">Home</a>
+                <a href="Menu.html">Menu</a>
+                <a href="Order.html">Order</a>
+                <a href="About.html">About</a>
+                <a href="Location.html">Locations</a>
+                <a href="#">Contact</a><br><br>
+
+            <form class="frm" onsubmit="return searchFunction()">
+                <div class="search-container">
+                 <input type="text" id="searchInput" placeholder="Search..." required>
+                  <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
             </div>
+          </form>
+                <div id="results"></div>
+                
         </nav>
     </header>
 
@@ -30,7 +45,16 @@
         <div class="hero-content">
             <h1>Artisan Coffee Crafted with Passion</h1>
             <p>Discover our carefully sourced beans and handcrafted beverages</p>
-            <button class="cta-button">Explore Our Menu</button>
+            <a href="Menu.html"><button class="cta-button">Explore Our Menu</button></a>
+        </div>
+    </section>
+
+
+    <section class="welcome">
+        <div class="welcome-content">
+            <h2>Welcome to Secret Dairies Café</h2>
+            <p>We serve freshly brewed coffee, delicious pastries, and a cozy ambiance to brighten your day.</p>
+            <img src="coffee.avif" alt="Cafe Image">
         </div>
     </section>
 
@@ -50,6 +74,40 @@
             </div>
         </div>
     </section>
+
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-box">
+            <p>"Best coffee in town! Love the ambiance and friendly staff!"</p>
+            <span>- Emily R.</span>
+        </div>
+        <div class="testimonial-box">
+            <p>"A must-visit café for coffee lovers. Highly recommend their cappuccino!"</p>
+            <span>- Daniel W.</span>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Our Coffee Creations</h2><br><br>
+        <div class="gallery-grid">
+            <img src="latte.avif" alt="Latte">
+            <img src="expresso.avif" alt="Espresso">
+            <img src="mocha.avif" alt="Mocha">
+            <img src="Cappuchino.avif" alt="Cappuccino">
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>© 2025 Secret Dairies Café | All Rights Reserved</p><br>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a><br><br>
+                <div class="social-links">
+                    <a href="#" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+    </footer>
 </div>
 </body>
 </html>
