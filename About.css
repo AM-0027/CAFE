@@ -21,12 +21,45 @@ body {
     align-items: center;
 }
 
+.logo-container {
+    position: relative;
+    left: -290px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
 .logo {
-    color: #F5E6D3;
-    font-size: 1.9rem;
-    font-weight: bold;
-    text-decoration: none;
+    width: 80px;  
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #F5E6D3; 
+    transition: transform 0.5s ease-in-out; /* Smooth rolling effect */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rotates the logo on hover */
+}
+
+.logo-text {
+    position: absolute;
+    left: 100%; /* Moves text to the right of image */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: #6F4E37;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
     font-family: "Merienda", cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-10px); /* Slight offset for smooth effect */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* Shows text on hover */
+    transform: translateX(10px); /* Moves text slightly to the right */
 }
 
 .nav-links {

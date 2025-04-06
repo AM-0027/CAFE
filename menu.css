@@ -15,25 +15,61 @@ body {
     align-items: center;
 }
 
+.logo-container {
+    position: relative;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
 .logo {
-    color: #F5E6D3;
-    font-size: 1.9rem;
-    font-weight: bold;
-    text-decoration: none;
+    width: 80px;  
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #F5E6D3; 
+    transition: transform 0.5s ease-in-out; /* Smooth rolling effect */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rotates the logo on hover */
+}
+
+.logo-text {
+    position: absolute;
+    left: 100%; /* Moves text to the right of image */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: rgb(190, 147, 90);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
     font-family: "Merienda", cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-10px); /* Slight offset for smooth effect */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* Shows text on hover */
+    transform: translateX(10px); /* Moves text slightly to the right */
 }
 
 .nav-links {
     display: flex;
     justify-content: center;
     align-items: center;    
-    margin-left: 50px;  
+    margin-left: 250px;  
     gap: 3rem;
 }
 
 .container h1{
+    color: #F5E6D3;
     display: inline;
-    margin-top: 6%;
+    right: -20%;
+    font-size: 1.9rem;
+    font-family: "Merienda", cursive;
 }
 
 .nav-links a {
@@ -130,4 +166,19 @@ h2 {
 .menu-item:hover {
     transform: scale(1.05);
     background: #f6cb9d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
