@@ -98,6 +98,7 @@ body {
     background-color: #8b4513; /* Darker color on hover */
 }
 
+
 /* ScrollBar */
 
 ::-webkit-scrollbar{
@@ -162,6 +163,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .menu-item:hover {
     transform: scale(1.05);
